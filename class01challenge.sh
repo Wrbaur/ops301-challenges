@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Script: syslog_backup.sh
-# Description: Copies /var/log/syslog to the current working directory,
-#              appends the current date and time to the filename,
+# Script: Class 01 challenge syslog_backup.sh
+# Description:
+# Copies /var/log/syslog to the current working directory, appends the current date and time to the filename,
 #              and includes timestamped echo statements.
 
 # Timestamp function
 timestamp() {
-  echo "[$(date '+%Y-%m-%d %H:%M:%S')]"
+  echo "[$(date '+%Y-%m-%d')]"
 }
 
 # Echo statement with timestamp
@@ -15,7 +15,7 @@ echo "$(timestamp) Starting syslog backup..."
 
 # Source and destination file paths
 source_file="/var/log/syslog"
-destination_file="syslog_backup_$(date '+%Y%m%d_%H%M%S').log"
+destination_file="syslog_backup_$(date '+%Y%m%d').log"
 
 # Echo statement with timestamp
 echo "$(timestamp) Copying syslog to $destination_file..."
