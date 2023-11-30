@@ -24,5 +24,5 @@ read permissions
 chmod -R "$permissions" "$directory"
 
 echo -e "\nNew Permissions settings:"
-ls -l "$directory" | awk `{pring $1, $9}`
+ls -l "$directory" | `awk `{print $1, $9}`
 
